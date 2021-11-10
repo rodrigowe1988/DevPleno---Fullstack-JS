@@ -1,5 +1,4 @@
 /*
-
 app.get('/', (requesr, response) => {
 	primeiro parâmetro é o endereço
 	segundo, é uma função
