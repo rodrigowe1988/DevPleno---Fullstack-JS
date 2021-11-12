@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Async/Await</title>
+</head>
+<body>
+	<script>
+		function bestRockBand(band) {
+			return new Promise((resolve, reject) => {
+				if (band == 'Queen') {
+					resolve({
+						success: true,
+						bandName: band,
+						msg: `${band} is the best rock band ever!`
+					})
+				} else {
+					reject({
+						success: false,
+						msg: "I'm not sure!"
+					})
+				}
+			})
+		}
+		function bestRockSong(response) {
+			return new Promise((resolve, reject) => {
+				if (response.success) {
+					resolve(`Bohemian Rapsody by ${response.bandName}`)
+				}else{
+					reject('Do you know Queen?')
+				}
+			})
+		}
+		async function doTheJob() {
+			try {
+				const bestRockBandResponse = await bestRockBand('Queen')
+				console.log(bestRockBandResponse)
+				const bestRockSongResponse = await bestRockSong(bestRockBandResponse)
+			}catch (err){
+				console.log(err)
+			}
+		}
+		doTheJob()
+	</script>
+</body>
+</html>
