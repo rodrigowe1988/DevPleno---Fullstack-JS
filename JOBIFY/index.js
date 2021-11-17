@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
-
 const sqlite = require('sqlite')
+
 const dbConnection = sqlite.open('banco.sqlite', { Promise })
 
 app.set('view engine', 'ejs')
@@ -21,8 +21,9 @@ app.get('/vaga', (request, response) => {
 
 const init = async() => {
 	const db = await dbConnection
-	await db.run('create table if not exists categorias (id INTEGER ')
+	await db.run('create table if not exists categorias (id INTEGER PRIMARY KEY, categoria TEXT;')
 }
+init()
 
 console.log(2)
 app.listen(3000, err => {
