@@ -1,0 +1,16 @@
+{
+  "name": "aula04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assincronismoCallback.js",
+  "dependencies": {
+    "left-pad": "^1.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node principalModulo1.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Index</title>
+	<style>
+		body {
+			background-color: #efefef;
+			font-family: sans-serif;
+			margin: 20px;
+		}
+		h1 {
+			font-size: 40px;
+		}
+		h2.titulo {
+			color: red;
+		}
+		#principal {
+			border: 2px solid blue;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<section id="principal">
+		<h1>FullStack Master</h1>
+		<h2 class="titulo outroTitulo">Sobre</h2>
+		<a href="pagina.html">Entre para ver</a>
+		<p class="titulo">Olá FullStack Master</p>
+		<a href="pureCSS.html"><p class="titulo">Botão para o Pure CSS</p></a>
+		<a href="bootstrap.html"><p class="titulo">Botão para o Bootstrap</p></a>
+	</section>
+	<span>Texto</span>
+	<button id="btn" type="button">Clique aqui</button>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			document.getElementById('btn').addEventListener('click', () => {
+				console.log('clicou!')
+				const p = document.createElement('p')
+				p.innerHTML = 'Olá mundo!!!'
+				document.body.appendChild(p)
+			})
+		})
+	</script>
+</body>
+</html>
