@@ -7,7 +7,7 @@ const registro = {
 	Paciente: {
 		id: 'YzAK',
 		type: 'rich_text',
-		rich_text: [{ text: { content: 'Rogério Weber' } } ],
+		rich_text: [{ text: { content: 'Cláudio' } } ],
 	},
 	Confirmado: {
 		id: 'mNk%3D',
@@ -16,12 +16,12 @@ const registro = {
 	Date: {
 	  id: 'zS%5Ds',
 	  type: 'date',
-	  date: { start: '2021-11-04T10:00:00.000-03:00', end: null }
+	  date: { start: '2021-11-23T10:00:00.000-03:00', end: null }
 	},
 	Name: {
 		id: 'title',
 		type: 'title',
-		title: [{ text: { content: 'Rogério Weber' } } ]
+		title: [{ text: { content: 'Cláudio' } } ]
 	}
 }
 console.log(registro)
@@ -37,7 +37,7 @@ const insert = async() => {
 		},
 		properties: registro,
 	})
-	console.log(inserted);
+	//console.log(inserted);
 /*
 	const data = await notion.databases.query({
 		database_id: '0945b1d248b241afb1953e244a4c735c',
